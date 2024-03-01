@@ -1,0 +1,41 @@
+version: '3'
+services:
+  sql:
+    image: mysql:5.7
+    container_name: users
+    volumes:
+      - /data/sql:/src/resources/sql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Gwendo17313027@
+
+      MYSQL_DATABASE: users
+    ports:
+      - "8080:8080"
+  mongodb:
+    image: mongo
+    container_name: products
+    volumes:
+      - /data/mongodb:/data/db
+    restart: always
+    ports:
+      - "27017:27017"
+  user:
+    build: ./user
+    container_name: user
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sql
+    environment:
+      - spring.datasource.url=jdbc:mysql://localhost:3306/users
+    restart: always
+  product:
+    build: ./product
+    container_name: product
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+    environment:
+      - spring.data.mongodb.uri=mongodb://product:27017/product

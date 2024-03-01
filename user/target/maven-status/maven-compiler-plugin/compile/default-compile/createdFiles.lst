@@ -1,5 +1,0 @@
-com\herbecha\app\UserApp.class
-com\herbecha\app\main\service\UserService.class
-com\herbecha\app\main\repository\UserRepository.class
-com\herbecha\app\main\model\User.class
-com\herbecha\app\main\config\SecurityConfig.class

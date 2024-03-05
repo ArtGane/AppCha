@@ -1,7 +1,7 @@
-package com.herbecha.app.main.service;
+package com.herbecha.app.service;
 
-import com.herbecha.app.main.model.User;
-import com.herbecha.app.main.repository.UserRepository;
+import com.herbecha.app.model.User;
+import com.herbecha.app.data.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,8 +18,7 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        User user = userRepository.findByEmail(email);
-        return user;
+        return userRepository.findByEmail(email);
     }
 
     public void createUser(User user) {

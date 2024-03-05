@@ -7,7 +7,7 @@ services:
       - /data/sql:/src/resources/sql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Gwendo17313027@
+      MYSQL_ROOT_PASSWORD: ${SQL_PASSWORD}
 
       MYSQL_DATABASE: users
     ports:
@@ -24,7 +24,7 @@ services:
     build: ./user
     container_name: user
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       - sql
     environment:
@@ -34,7 +34,7 @@ services:
     build: ./product
     container_name: product
     ports:
-      - "8081:8081"
+      - "8082:8082"
     depends_on:
       - mongodb
     environment:

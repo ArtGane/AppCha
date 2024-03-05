@@ -1,4 +1,4 @@
-package com.herbecha.app.main.model;
+package com.herbecha.app.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

@@ -1,6 +1,7 @@
-package com.herbecha.app.main.repository;
+package com.herbecha.app.data;
 
-import com.herbecha.app.main.model.User;
+
+import com.herbecha.app.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

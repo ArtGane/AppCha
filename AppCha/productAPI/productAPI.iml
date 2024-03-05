@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../product">
+      <sourceFolder url="file://$MODULE_DIR$/../../product/src/main/java/com/herbeacha/app" isTestSource="false" packagePrefix="com.herbeacha.app.product" />
+      <sourceFolder url="file://$MODULE_DIR$/../../product/src/test/java" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

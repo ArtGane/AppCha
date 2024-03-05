@@ -1,13 +1,13 @@
-package com.herbeacha.app.product;
+package com.herbeacha.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductApplication {
+public class ProductApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductApplication.class, args);
+		SpringApplication.run(ProductApp.class, args);
 	}
 
 }

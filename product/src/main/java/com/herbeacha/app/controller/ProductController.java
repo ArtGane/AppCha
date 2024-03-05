@@ -1,6 +1,7 @@
 package com.herbeacha.app.controller;
 
 import com.herbeacha.app.model.Product;
+import com.herbeacha.app.model.dto.ProductDto;
 import com.herbeacha.app.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 

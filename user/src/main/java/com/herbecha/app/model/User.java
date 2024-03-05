@@ -17,21 +17,21 @@ import java.util.Collection;
 public class User implements UserDetails {
 
     @Id
-    Long id;
+    private Long id;
     @Column
-    String firstname;
+    private String firstname;
     @Column
-    String lastname;
+    private String lastname;
     @Column(nullable = false)
-    String email;
+    private String email;
     @Column(nullable = false)
-    String password;
+    private String password;
     @Column
-    String address;
+    private String address;
     @Column
-    String cp;
+    private String cp;
     @Column
-    String city;
+    private String city;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -4,6 +4,7 @@ import com.herbeacha.app.data.ProductRepository;
 import com.herbeacha.app.model.Category;
 import com.herbeacha.app.model.Product;
 import com.herbeacha.app.model.Type;
+import com.herbeacha.app.model.dto.ProductDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,12 +25,12 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public void createProduct(String name, Type type, String description, Category category) {
+    public void createProduct(ProductDto productDto) {
         Product product = new Product();
-        product.setName(name);
-        product.setType(type);
-        product.setDescription(description);
-        product.setCategory(category);
+        product.setName(productDto.getName());
+        product.setType(productDto.getType());
+        product.setDescription(productDto.getDescription());
+        product.setCategory(productDto.getCategory());
         productRepository.save(product);
     }
 
@@ -49,5 +50,9 @@ public class ProductService {
 
     public Integer countProductsByCategory(Category category) {
         return productRepository.countByCategory(category);
+    }
+
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
     }
 }

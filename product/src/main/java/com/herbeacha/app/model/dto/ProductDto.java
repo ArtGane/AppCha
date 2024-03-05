@@ -1,30 +1,23 @@
-package com.herbeacha.app.model;
+package com.herbeacha.app.model.dto;
 
-import jakarta.persistence.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.herbeacha.app.model.Category;
+import com.herbeacha.app.model.Type;
 
-@Document("products")
-public class Product {
+public class ProductDto {
 
-    @Id
-    private Long id;
-    private String name;
-    private Type type;
-    private String description;
-    private Category category;
+    String name;
+    Type type;
+    String description;
+    Category category;
 
-    public Product(String name, Type type, String description, Category category) {
+    public ProductDto() {
+    }
+
+    public ProductDto(String name, Type type, String description, Category category) {
         this.name = name;
         this.type = type;
         this.description = description;
         this.category = category;
-    }
-
-    public Product() {
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getName() {
